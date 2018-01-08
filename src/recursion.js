@@ -7,16 +7,14 @@
 // Example: 5! = 5 x 4 x 3 x 2 x 1 = 120
 // factorial(5); // 120
 var factorial = function(n) {
-  //n negative return null
-  //n positive return factorial
   if(n < 0){
     return null;
   }
-  if(n === 0){￼
+  if(n === 0){
     return 1;
   }
-return n * factorial(n - 1);
-};
+    return n * factorial(n -1);
+  }
 
 // 2. Compute the sum of an array of integers.
 // sum([1,2,3,4,5,6]); // 21
@@ -56,17 +54,15 @@ return isEven(n - 2);
 // sumBelow(7); // 21
 
 var sumBelow = function(n) {
-var sum = 0;
-  if(Array.isArray(n)){
-    for(var i in n){
-      sum += n[i];
-    }
-    sum = n;
-  }else if(n > 0){
-    return sumBelow (n - 1);
-  }else{
+  if(n === 0){
+    return 0;
   }
-return sumBelow (n + 1)}
+  if(n < 0){
+    return (n + 1) + sumBelow (n + 1);
+  }
+  if(n > 0){
+  }
+return (n - 1) + sumBelow(n -1);
 };
 
 // 6. Get the integers within a range (x, y).
@@ -111,7 +107,7 @@ var modulo = function(x, y) {
 var multiply = function(x, y) {
 };
 
-// 13. Write ahttp://www.codecademy.com/courses/javascript-lesson-http://www.codecademy.com/courses/javascript-lesson-205205 function that divides two numbers without using the / operator or
+// 13. Write a function that divides two numbers without using the / operator or
 // Math methods.
 var divide = function(x, y) {
 };
