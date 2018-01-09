@@ -89,14 +89,28 @@ return arr.concat(range(x - 1, y));
 // exponent(4,3); // 64
 // https://www.khanacademy.org/computing/computer-science/algorithms/recursive-algorithms/a/computing-powers-of-a-number
 var exponent = function(base, exp) {
+  if(exp === 0){
+    return 1;
+  }
+  if(exp < 0){
+    return exponent(base, exp + 1) /base;
+  }
+  if(exp === 1){
+    return base;
+  } else{
+    return base * exponent(base, exp - 1);
+  }
 };
-
 // 8. Determine if a number is a power of two.
 // powerOfTwo(1); // true
 // powerOfTwo(16); // true
 // powerOfTwo(10); // false
 var powerOfTwo = function(n) {
+  
 };
+//input numbers
+//if input not power of 2 then return false
+//output boolean
 
 // 9. Write a function that reverses a string.
 var reverse = function(string) {
